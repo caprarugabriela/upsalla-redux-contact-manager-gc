@@ -1,5 +1,6 @@
-import { Layout } from '../layouts/Layout';
+import { GoogleLogin } from '../components/auth';
 import { Button } from '../components/ui';
+import { Layout } from '../layouts/Layout';
 import { useDispatch, useSelector } from 'react-redux';
 
 export const Home = () => {
@@ -7,6 +8,7 @@ export const Home = () => {
   const authenticated = useSelector(({ auth }) => {
     return auth.authenticated;
   });
+
   return (
     <Layout>
       <div className="container mx-auto px-4 text-center pt-40">
@@ -22,15 +24,9 @@ export const Home = () => {
             Logout
           </Button>
         ) : (
-          <Button
-            onClick={() => {
-              dispatch({
-                type: 'auth/setUser',
-              });
-            }}
-          >
-            Login
-          </Button>
+          <div className="flex justify-center">
+            <GoogleLogin></GoogleLogin>
+          </div>
         )}
       </div>
     </Layout>

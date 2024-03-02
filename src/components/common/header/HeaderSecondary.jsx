@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { Button } from '../../ui';
+import { GoogleLogin } from './../../auth';
 
 export const HeaderSecondary = () => {
   const authenticated = useSelector(({ auth }) => {
@@ -7,14 +8,14 @@ export const HeaderSecondary = () => {
   });
 
   return (
-    <section className="bg-gray-200 py-2 border-b border-b-gray-500">
+    <section className="bg-gray-200 py-2 border-b border-b-gray-500 ">
       <div className="container mx-auto px-4 min-h-10">
         {authenticated ? (
           <Button title="Add Contact" skin="success">
             Add Contact
           </Button>
         ) : (
-          <>google</>
+          <GoogleLogin></GoogleLogin>
         )}
       </div>
     </section>
