@@ -1,8 +1,8 @@
-//for practice
+// for practice
 
 import axios from 'axios';
 
-//axios client
+// axios client
 const baseUrl = import.meta.env.VITE_SERVER_URI;
 
 export const contactsClient = axios.create({

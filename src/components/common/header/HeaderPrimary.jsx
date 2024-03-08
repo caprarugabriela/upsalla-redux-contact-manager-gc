@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { SearchContacts } from '../../contacts/SearchContacts';
+import { SearchContacts } from '../../contacts';
 import { useSelector } from 'react-redux';
 
 export const HeaderPrimary = () => {
@@ -9,7 +9,7 @@ export const HeaderPrimary = () => {
 
   return (
     <section className="border-b border-b-gray-500 py-4 ">
-      <div className="container mx-auto px-4  flex justify-between min-h-10">
+      <div className="container mx-auto px-4 flex justify-between min-h-10">
         <h1 className="font-semibold text-2xl">
           <Link to="/" title="Home">
             Contact Manager
